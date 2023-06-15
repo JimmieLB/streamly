@@ -5,8 +5,8 @@ const CONNECTIONPARAMS = {
   useUnifiedTopology: true
 };
 
-mongoose.connect(CONNECTION, CONNECTIONPARAMS);
-// mongoose.connect('mongodb://localhost/fetcher');
+// mongoose.connect(CONNECTION, CONNECTIONPARAMS);
+mongoose.connect('mongodb://localhost/fetcher');
 
 let repoSchema = mongoose.Schema({
   name: 'String',
