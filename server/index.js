@@ -25,6 +25,7 @@ io.on('connection', (socket) => {
   socket.emit('hello', {message: 'a new client connected'});
   console.log('Connection', socket.id);
   sockets.push(socket);
+  socket.indexID = sockets.length - 1;
   socket.on('joining', function(data) {
     socket.join(data);
   })
@@ -38,6 +39,7 @@ io.on('connection', (socket) => {
   socket.on('disconnect', function () {
     console.log('user disconnected');
     delete streams[socket.id];
+    sockets.splice(socket.indexID,1)
   });
 })
 
