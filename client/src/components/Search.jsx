@@ -4,7 +4,6 @@ const Comp = () => {
 
   return (
     <div>
-      Stuff
     </div>
   );
 }

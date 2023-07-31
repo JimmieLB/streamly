@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import socket from './connection.js';
 import axios from 'axios';
-
 const Home = () => {
   const [rooms, setRooms] = useState([]);
 
@@ -14,19 +13,22 @@ const Home = () => {
       }).catch((err) => {
         console.error(err);
       })
-    }, 5000);
+    }, 2000);
     return () => clearInterval(interval);
   },[]);
 
   return (
+    <>
     <div className="container">
-      <a href={location.href + 'stream'}> Stream</a>
-      {
-        rooms.map((room, index) => {
-          return (<div><br/><a key={index} href={`${location.href}rooms/${room}`}>{room}</a></div>)
-        })
-      }
+      <a href={location.href + 'stream'}><div id="streamBtn"><a>Stream</a></div></a>
     </div>
+
+    {
+      rooms.map((room, index) => {
+        return (<div className="streamItem"><a key={index} href={`${location.href}rooms/${room}`}>{room}</a></div>)
+      })
+    }
+    </>
   );
 }
 

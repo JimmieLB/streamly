@@ -10,7 +10,7 @@ import Video from '../components/Video.jsx';
 const Stream = () => {
   return (
     <div className="container">
-      <h1>Github Fetcher</h1>
+      <h1>Streamly</h1>
       <Search/>
       <Video/>
     </div>
