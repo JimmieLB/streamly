@@ -22,14 +22,13 @@ const Rooms = () => {
       img.onload=start;
       img.src=data;
       function start(){
-        context.drawImage(img,0,0);
+        context.drawImage(img,0,0,1440/5,900/5);
       }
     })
   });
   return (
     <div className="container">
-      <h1>TESTING TESTING TESTING</h1>
-      <canvas id='canvas' style={{width: 1440, height: 900}}></canvas>
+      <canvas id='canvas' style={{width: 1440/3, height: 900/3}}></canvas>
     </div>
   );
 }

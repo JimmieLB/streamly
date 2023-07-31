@@ -75,18 +75,18 @@ const Video = ({ source }) => {
       // refresh();
       refresh();
       setCount(count + 1);
-    }, 1000);
+    }, 100);
 
     return () => clearInterval(interval);
   }, []);
 
 
   return (
-    <div>
+    <div className="streamContainer">
       { socket.id }
       {/* <canvas id="context"></canvas> */}
       <canvas id="context"></canvas>
-      <video id="video" hidden={false} autoPlay ></video>
+      <video id="video" hidden={true} autoPlay ></video>
     </div>
   );
 }
