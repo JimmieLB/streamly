@@ -7,8 +7,9 @@ See it in action: https://streamly-rmgv.onrender.com
 ![image](https://github.com/JimmieLB/streamly/assets/60014163/7b5e3f2b-070e-443e-8268-ec808f52622b)
 
 ###  Built With  
-* [![React][React.js]][React-url]
-* [![Node][Node.js]][Node-url]
+* React.js
+* Node.js
+* Socket.io
 
 
 ###  Future Goals
